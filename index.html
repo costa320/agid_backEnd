@@ -106,9 +106,15 @@
                                             <div class="modal-dialog modal-lg" role="document">
                                                 <div class="modal-content">
 
-                                                    <div class=" bg-color color-txt modal-header">
+                                                    <div class=" bg-color color-txt-white modal-header">
                                                         <label class="l-font">Aggiugi Applicazione</label>
-                                                        <button type="button" class="color-txt close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        
+                                                        
+                                                        
+                                                        <button type="button" class="color-txt-white close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                        
+                                                        
+                                                        
                                                         <h4 class="modal-title" id="myModalLabel"></h4>
                                                     </div>
                                                     <div class="modal-body">
@@ -136,7 +142,7 @@
                                                                 
                                                                  <a class="btn btn-primary pa-add-service" 
                                                                     role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
-                                                                     <i class="icon-plus icons font-2xl" ></i> Aggiungi Attributo
+                                                                     <i class="icon-arrow-down icons font-m" ></i> Aggiungi Attributo
                                                                 </a>
                                                             </div>
                                                             
@@ -144,7 +150,28 @@
                                                             <div class="collapse" id="addAttributeCollapse">
                                                                 <div class="well">
                                                                     
-                                                                    Collapsed Area
+                                                                    <hr style="background-color: black">
+                                                                    
+                                                                    
+                                                                    
+                                                            <div class="form-group">
+                                                                <label for="nomeAttributo">Nome Attributo</label>
+                                                                <input type="text" class="form-control" id="nomeAttributo" placeholder="nome">
+                                                            </div>
+                                                                    
+                                                            <div class="form-group">
+                                                                <label for="URL">Descrizione Attributo</label>
+                                                                <input type="text" class="form-control" id="descrizioneAttributo" placeholder="descrizione">
+                                                            </div>
+                                                                    
+                                                            <a class="m-left-60 btn btn-primary pa-add-service" 
+                                                                    role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
+                                                                     <i class="icon-plus icons font-2xl" ></i> Salva Attributo
+                                                                </a>
+                                                                    
+                                                                    
+                                                           <hr style="background-color: black">         
+                                                                    
                                                                     
                                                                 </div>
                                                             </div>
@@ -194,14 +221,17 @@
 
                                                                 </tbody>
                                                             </table>
-
-
                                                         </form>
                                                     </div>
 
                                                     <div class="modal-footer">
                                                         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                                        
+                                                        <a class="color-txt-white pointer btn btn-primary pa-add-service" 
+                                                                    data-dismiss="modal" aria-label="Close"> 
+                                                                     <span aria-hidden="true"></span>Salva Applicazione
+                                                        </a>
+                                                        
                                                     </div>
 
                                                 </div>
@@ -209,16 +239,8 @@
                                         </div>
 
 
-
-
-
-
-
-
-
-
                                         <div class=" text-center col-md-6">
-                                            <a href="service-new.html" class="btn btn-primary pa-add-service"> <i class="icon-plus icons font-2xl"></i> Configura Utente</a>
+                                            <a href="service-new.html" class="btn btn-primary pa-add-service"> <i class="icon-settings icons font-2xl"></i> Configura Utente</a>
                                         </div>
 
                                     </div>

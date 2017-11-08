@@ -15,8 +15,8 @@
 .bg-color{
     background-color: #0766cc;
 }
-.color-txt{
-    color: white;
+.color-txt-white{
+    color: white !important;
 }
 .m-top-5{
     margin-top: 5%;
@@ -38,4 +38,10 @@
 }
 .inline{
     display: flex;
+}
+.pointer{
+    cursor: pointer;
+}
+.font-m{
+    font-size: 1.3em;
 }
