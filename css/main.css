@@ -1,0 +1,41 @@
+.mt-7{
+    margin-top: 7%;
+}
+.l-font{
+    font-size: 1.6em;
+    font-family: sans-serif;
+}
+.m-font{
+    font-size: 1em;
+    font-family: sans-serif;
+}
+.bold{
+    font-weight: bold;
+}
+.bg-color{
+    background-color: #0766cc;
+}
+.color-txt{
+    color: white;
+}
+.m-top-5{
+    margin-top: 5%;
+}
+.m-bottom-5{
+    margin-bottom: 5%;
+}
+.m-left-60{
+    margin-left: 60%;
+}
+.m-left-40{
+    margin-left: 40%;
+}
+.m-left-39{
+    margin-left: 39%;
+}
+.m-right-10{
+    margin-right: 10%;
+}
+.inline{
+    display: flex;
+}
