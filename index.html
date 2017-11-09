@@ -78,112 +78,422 @@
             <div class="container-fluid">
                 <div class="animated fadeIn">
 
-                    <!-- Area Che crea lo spazio-->
-                    <div class="row mt-7"></div>
-                    <!-- / Area Che crea lo spazio -->
 
 
-
-                    <div class="row">
+                    <div class="row mt-3">
                         <div class="col-md-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h2>Gestione Servizi</h2>
-                                </div>
-                                <div class="card-block">
+
+                            <!-- Nav tabs -->
+                            <ul class="nav nav-tabs" role="tablist">
+
+                                <li role="presentation" class="active"><a href="#GApp" aria-controls="GApp" role="tab" data-toggle="tab">Gestione Applicazione</a></li>
+
+                                <li role="presentation"><a href="#GUt" aria- controls="GUt" role="tab" data-toggle="tab">Gestione Utenti</a></li>
+
+                            </ul>
+
+                            <!-- Tab panes -->
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="GApp">
+
+                                    <div class="card">
+
+
+                                        <div class="mt-1 mb-1 row mb-3">
+                                            <div class=" text-center col-md-6">
+                                                <a href="addNewApp.html" class="btn btn-primary pa-add-service" data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="icon-plus icons font-2xl" ></i> Aggiungi Applicazione</a>
+                                            </div>
 
 
 
-                                    <div class="row mb-3">
-                                        <div class=" text-center col-md-6">
-                                            <a href="addNewApp.html" class="btn btn-primary pa-add-service" data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="icon-plus icons font-2xl" ></i> Aggiungi Applicazione</a>
-                                        </div>
+                                            <!-- Modal -->
+                                            <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+
+                                                        <div class=" bg-color color-txt-white modal-header">
+                                                            <label class="l-font">Aggiugi Applicazione</label>
+
+                                                            <button type="button" class="color-txt-white close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
 
 
-                                        <!-- Modal -->
-                                        <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-                                            <div class="modal-dialog modal-lg" role="document">
-                                                <div class="modal-content">
+                                                            <h4 class="modal-title" id="myModalLabel"></h4>
+                                                        </div>
+                                                        <div class="modal-body">
 
-                                                    <div class=" bg-color color-txt-white modal-header">
-                                                        <label class="l-font">Aggiugi Applicazione</label>
-                                                        
-                                                        
-                                                        
-                                                        <button type="button" class="color-txt-white close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                        
-                                                        
-                                                        
-                                                        <h4 class="modal-title" id="myModalLabel"></h4>
-                                                    </div>
-                                                    <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="AppName">Nome Applicazione</label>
+                                                                    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nome app">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="URL">URL</label>
+                                                                    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="url">
+                                                                </div>
 
+                                                                <label>Descrizione</label>
+                                                                <textarea class="form-control" rows="2" placeholder="descrizione"></textarea>
 
 
-                                                        <form>
-                                                            <div class="form-group">
-                                                                <label for="AppName">Nome Applicazione</label>
-                                                                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nome app">
-                                                            </div>
-                                                            <div class="form-group">
-                                                                <label for="URL">URL</label>
-                                                                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="url">
-                                                            </div>
+                                                                <div class="row m-top-5 m-bottom-5 m-left-60">
 
-                                                            <label>Descrizione</label>
-                                                            <textarea class="form-control" rows="2" placeholder="descrizione"></textarea>
-
-
-
-
-
-                                                            <div class="row m-top-5 m-bottom-5 m-left-60">
-                                                                
-                                                                 <a class="btn btn-primary pa-add-service" 
-                                                                    role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
+                                                                    <a class="btn btn-primary pa-add-service" role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
                                                                      <i class="icon-arrow-down icons font-m" ></i> Aggiungi Attributo
                                                                 </a>
-                                                            </div>
-                                                            
-                                                            <!--       Collapsed Area-->
-                                                            <div class="collapse" id="addAttributeCollapse">
-                                                                <div class="well">
-                                                                    
-                                                                    <hr style="background-color: black">
-                                                                    
-                                                                    
-                                                                    
-                                                            <div class="form-group">
-                                                                <label for="nomeAttributo">Nome Attributo</label>
-                                                                <input type="text" class="form-control" id="nomeAttributo" placeholder="nome">
-                                                            </div>
-                                                                    
-                                                            <div class="form-group">
-                                                                <label for="URL">Descrizione Attributo</label>
-                                                                <input type="text" class="form-control" id="descrizioneAttributo" placeholder="descrizione">
-                                                            </div>
-                                                                    
-                                                            <a class="m-left-60 btn btn-primary pa-add-service" 
-                                                                    role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
+                                                                </div>
+
+                                                                <!--       Collapsed Area-->
+                                                                <div class="collapse" id="addAttributeCollapse">
+                                                                    <div class="well">
+
+                                                                        <hr style="background-color: black">
+
+
+
+                                                                        <div class="form-group">
+                                                                            <label for="nomeAttributo">Nome Attributo</label>
+                                                                            <input type="text" class="form-control" id="nomeAttributo" placeholder="nome">
+                                                                        </div>
+
+                                                                        <div class="form-group">
+                                                                            <label for="URL">Descrizione Attributo</label>
+                                                                            <input type="text" class="form-control" id="descrizioneAttributo" placeholder="descrizione">
+                                                                        </div>
+
+                                                                        <a class="m-left-60 btn btn-primary pa-add-service" role="button" data-toggle="collapse" href="#addAttributeCollapse" aria-expanded="false" aria-controls="collapseExample"> 
                                                                      <i class="icon-plus icons font-2xl" ></i> Salva Attributo
                                                                 </a>
-                                                                    
-                                                                    
-                                                           <hr style="background-color: black">         
-                                                                    
-                                                                    
+
+
+                                                                        <hr style="background-color: black">
+
+
+                                                                    </div>
                                                                 </div>
+
+
+
+
+
+                                                                <table class="table">
+                                                                    <thead class="m-font bold">
+                                                                        <tr class="text-center">
+                                                                            <td>Attributo</td>
+                                                                            <td>Azioni</td>
+                                                                        </tr>
+                                                                    </thead>
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                            <td class="inline">
+
+                                                                                <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                            <td class="inline text-center">
+                                                                                <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                            <td class="inline text-center">
+                                                                                <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                            <td class="inline text-center">
+                                                                                <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                            </td>
+                                                                        </tr>
+
+                                                                    </tbody>
+                                                                </table>
+                                                            </form>
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                                            <a class="color-txt-white pointer btn btn-primary pa-add-service" data-dismiss="modal" aria-label="Close"> 
+                                                                     <span aria-hidden="true"></span>Salva Applicazione
+                                                        </a>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+
+
+                                        </div>
+
+                                        <table class="table table-hover table-outline mb-0">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th scope="col" class=" text-center pa-servicename">Nome Applicazione</th>
+                                                    <th scope="col" class="text-center pa-action">Azioni</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
                                                             </div>
-                                                            
-                                                            
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <!--
+                                            <ul class="pagination mt-3">
+                                                <li class="page-item"><a class="page-link" href="#">Prev</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+-->
+
+
+                                    </div>
+
+                                </div>
+                                <!--tab-pane GApp-->
+
+                                <div role="tabpanel" class="tab-pane" id="GUt">
+
+                                    <div class="card">
+
+                                        <div class="mt-1 mb-1 row mb-3">
+                                            <div class=" text-center col-md-6">
+                                                <a href="" class="btn btn-primary pa-add-service" data-toggle="modal" data-target=".modal-lg-AddUser"> <i class="icon-plus icons font-2xl" ></i> Aggiungi Utente</a>
+                                            </div>
+
+                                            <!-- Modal -->
+                                            <div class="modal fade modal-lg-AddUser" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+                                                <div class="modal-dialog modal-lg" role="document">
+                                                    <div class="modal-content">
+
+                                                        <div class=" bg-color color-txt-white modal-header">
+                                                            <label class="l-font">Configura Utente</label>
+
+
+
+                                                            <button type="button" class="color-txt-white close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+
+
+                                                            <h4 class="modal-title" id="myModalLabel"></h4>
+                                                        </div>
+
+                                                        <div class="modal-body">
+
+
+
+
+
+
+
+
+
+
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="Nome">Nome</label>
+                                                                    <input type="text" class="form-control" id="name" placeholder="nome">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="codFisc">Codice Fiscale</label>
+                                                                    <input type="text" class="form-control" id="codFisc" placeholder="Codice Fiscale">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="codSPID">Codice SPID</label>
+                                                                    <input type="text" class="form-control" id="codSPID" placeholder="codice SPID">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="username">Nome Utente</label>
+                                                                    <input type="text" class="form-control" id="username" placeholder="nome utente">
+                                                                </div>
+
+                                                                <a href="" class="m-left-70 m-bottom-5 btn btn-primary pa-add-service" data-toggle="modal" data-target=".modal-lg-AddUser"> <i class="icon-settings icons font-2xl"></i> Configura App</a>
+
+                                                            </form>
 
 
 
                                                             <table class="table">
                                                                 <thead class="m-font bold">
                                                                     <tr class="text-center">
-                                                                        <td>Attributo</td>
+                                                                        <td>Nome Applicazione</td>
                                                                         <td>Azioni</td>
                                                                     </tr>
                                                                 </thead>
@@ -221,260 +531,272 @@
 
                                                                 </tbody>
                                                             </table>
-                                                        </form>
-                                                    </div>
 
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                        
-                                                        <a class="color-txt-white pointer btn btn-primary pa-add-service" 
-                                                                    data-dismiss="modal" aria-label="Close"> 
+
+
+
+
+
+
+
+
+
+                                                        </div>
+
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                                                            <a class="color-txt-white pointer btn btn-primary pa-add-service" data-dismiss="modal" aria-label="Close"> 
                                                                      <span aria-hidden="true"></span>Salva Applicazione
                                                         </a>
-                                                        
-                                                    </div>
 
+                                                        </div>
+
+                                                    </div>
                                                 </div>
                                             </div>
+
                                         </div>
 
+                                        <table class="table table-hover table-outline mb-0">
+                                            <thead class="thead-default">
+                                                <tr>
+                                                    <th scope="col" class=" text-center pa-servicename">Nome Applicazione</th>
+                                                    <th scope="col" class="text-center pa-action">Azioni</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
 
-                                        <div class=" text-center col-md-6">
-                                            <a href="service-new.html" class="btn btn-primary pa-add-service"> <i class="icon-settings icons font-2xl"></i> Configura Utente</a>
-                                        </div>
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td data-label="Nome servizio" class="table-th-50">
+                                                        Lorem ipsum dolor sit
+                                                        <div class="small text-guide">
+                                                            Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
+                                                        </div>
+                                                    </td>
+
+                                                    <td data-label="azioni" class="text-center">
+                                                        <div class="row">
+                                                            <div class="col-5">
+                                                                <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                            <div class="col-5">
+                                                                <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+
+
+                                        <!--
+                                            <ul class="pagination mt-3">
+                                                <li class="page-item"><a class="page-link" href="#">Prev</a>
+                                                </li>
+                                                <li class="page-item active">
+                                                    <a class="page-link" href="#">1</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link" href="#">Next</a>
+                                                </li>
+                                            </ul>
+-->
+
 
                                     </div>
 
-                                    <table class="table table-hover table-outline mb-0">
-                                        <thead class="thead-default">
-                                            <tr>
-                                                <th scope="col" class=" text-center pa-servicename">Nome Applicazione</th>
-                                                <th scope="col" class="text-center pa-action">Azioni</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis. Phasellus iaculis tristique nulla. Cras eu nisi felis.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Aliquam in vestibulum nibh. Phasellus iaculis tristique nulla. Cras eu nisi felis.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-
-                                                    </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td data-label="Nome servizio" class="table-th-50">
-                                                    Lorem ipsum dolor sit
-                                                    <div class="small text-guide">
-                                                        Duis quis ex placerat, varius erat vel, dapibus lacus. Nulla facilisi. Integer vel diam vestibulum, commodo nibh sit amet, vehicula sem.
-                                                    </div>
-                                                </td>
-
-                                                <td data-label="azioni" class="text-center">
-                                                    <div class="row">
-                                                        <div class="col-5">
-                                                            <a href="#" title="modifica"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                        <div class="col-5">
-                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                        </div>
-                                                    </div>
-                                                </td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-
-
-                                    <ul class="pagination mt-3">
-                                        <li class="page-item"><a class="page-link" href="#">Prev</a>
-                                        </li>
-                                        <li class="page-item active">
-                                            <a class="page-link" href="#">1</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">2</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">3</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">4</a>
-                                        </li>
-                                        <li class="page-item"><a class="page-link" href="#">Next</a>
-                                        </li>
-                                    </ul>
-
-
                                 </div>
+                                <!--tab-pane GUT-->
                             </div>
+                            <!--tab-contet-->
+
                         </div>
-                        <!--/.col-->
+                        <!--col-md 12-->
                     </div>
-                    <!--/.row-->
+                    <!--                    row-->
                 </div>
+                <!--fade in-->
             </div>
             <!-- /.conainer-fluid -->
         </main>
+    </div>
+    <!--    app-body-->
+
+    <!-- il menù aside forse non serve vedremo -->
+    <aside class="aside-menu">
 
 
-        <!-- il menù aside forse non serve vedremo -->
-        <aside class="aside-menu">
-
-
-            <!-- Tab panes -->
-            <div class="tab-content">
-                <div class="tab-pane active" id="timeline" role="tabpanel">
-                    <div class="callout m-0 py-2 text-center bg-faded text-uppercase">
-                        <small><b>Storico azioni</b>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="timeline" role="tabpanel">
+                <div class="callout m-0 py-2 text-center bg-faded text-uppercase">
+                    <small><b>Storico azioni</b>
                         </small>
+                </div>
+                <hr class="transparent mx-3 my-0">
+                <div class="callout callout-warning m-0 py-3">
+                    <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
                     </div>
-                    <hr class="transparent mx-3 my-0">
-                    <div class="callout callout-warning m-0 py-3">
-                        <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
-                        </div>
-                        <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
-                        <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
-                    </div>
-                    <hr class="mx-3 my-0">
-                    <div class="callout callout-info m-0 py-3">
+                    <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
+                    <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
+                </div>
+                <hr class="mx-3 my-0">
+                <div class="callout callout-info m-0 py-3">
 
-                        <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
-                        </div>
-                        <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
-                        <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
-
+                    <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
                     </div>
-                    <hr class="transparent mx-3 my-0">
+                    <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
+                    <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
 
                 </div>
+                <hr class="transparent mx-3 my-0">
 
             </div>
 
-        </aside>
+        </div>
+
+    </aside>
 
     </div>
 
@@ -483,6 +805,20 @@
         <span class="float-right">Powered by <a href="http://www.agid.gov.it">AgID & Team Digitale</a>
         </span>
     </footer>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
 
     <!-- Bootstrap and necessary plugins -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>

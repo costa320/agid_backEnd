@@ -1,5 +1,11 @@
-.mt-7{
-    margin-top: 7%;
+.mb-1{
+    margin-bottom: 1% !important;
+}
+.mt-1{
+    margin-top: 1% !important;
+}
+.mt-3{
+    margin-top: 3% !important;
 }
 .l-font{
     font-size: 1.6em;
@@ -18,20 +24,35 @@
 .color-txt-white{
     color: white !important;
 }
+.m-top-2{
+    margin-top: 2% !important; 
+}
 .m-top-5{
-    margin-top: 5%;
+    margin-top: 5% !important; 
+}
+.m-bottom-2{
+    margin-bottom: 2%;
 }
 .m-bottom-5{
     margin-bottom: 5%;
 }
+.m-left-70{
+    margin-left: 70%;
+}
 .m-left-60{
-    margin-left: 60%;
+    margin-left: 60% !important;
 }
 .m-left-40{
     margin-left: 40%;
 }
 .m-left-39{
     margin-left: 39%;
+}
+.m-bottom-5{
+    margin-bottom: 5% !important;
+}
+.m-right-5{
+    margin-right: 5%;
 }
 .m-right-10{
     margin-right: 10%;

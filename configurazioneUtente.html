@@ -1,5 +1,204 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    </head>
-    
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="servizi.gov.it - I servizi della Pubblica Amministrazione">
+    <meta name="author" content="Agenzia per l'Italia Digitale">
+    <meta name="keyword" content="">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Agid - servizi.gov.it</title>
+
+    <!-- Icons -->
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/simple-line-icons.css" rel="stylesheet">
+
+    <!-- Main styles for this application -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom AgID styles -->
+    <link href="css/agid-style.css" rel="stylesheet">
+
+    <link href="css/mainConfigurazioneUtente.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="app header-fixed sidebar-fixed aside-menu-fixed aside-menu-hidden">
+
+    <header class="app-header navbar">
+        <a class="navbar-brand" href="index.html"></a>
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="d-md-down-none">Risorse</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Risorse</strong>
+                    </div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profilo metadati</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Documentazione</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Sviluppatori</a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle nav-link" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <img src="img/avatars/6.jpg" class="img-avatar" alt="admin@bootstrapmaster.com">
+                    <span class="d-md-down-none">Umberto Rosini</span>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right">
+                    <div class="dropdown-header text-center">
+                        <strong>Impostazioni</strong>
+                    </div>
+                    <a class="dropdown-item" href="#"><i class="fa fa-user"></i> Profilo</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-users"></i> Gestione Utenti</a>
+                    <a class="dropdown-item" href="#"><i class="fa fa-lock"></i> Logout</a>
+                </div>
+            </li>
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link" href="#"><i class="icon-bell"></i><span class="badge badge-pill badge-danger">5</span></a>
+            </li>
+            <li class="nav-item d-md-down-none">
+                <a class="nav-link navbar-toggler aside-menu-toggler" href="#">☰</a>
+            </li>
+        </ul>
+    </header>
+
+    <div class="app-body">
+
+
+        <!-- Main content -->
+        <main class="main">
+
+            <div class="container-fluid">
+                <div class="animated fadeIn">
+
+                    
+                    <div class="row m-top-5"></div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="card">
+                                <div class="bg-color-blueAgid color-txt-white card-header">
+                                    <h2>Configurazione Utente</h2>
+                                </div>
+                                
+                                <div class="card-block">
+                                    
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="name">Nome</label>
+                                            <input type="text" class="form-control" id="nameUser" placeholder="nome">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Codice Fiscale">Codice Fiscale</label>
+                                            <input type="text" class="form-control" id="codFisc" placeholder="codice fiscale">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Codice SPID">Codice SPID</label>
+                                            <input type="text" class="form-control" id="codiceSpid" placeholder="codice SPID">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Username">Nome Utente</label>
+                                            <input type="text" class="form-control" id="Username" placeholder="nome Utente">
+                                        </div>
+
+                                        <div class="inline m-left-60 text-center col-md-4">
+                                            
+                                            <a href="addNewApp.html" class="m-right-5 btn btn-primary pa-add-service" data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="icon-plus icons font-2xl" ></i> Censisci Applicazione</a>
+                                        
+                                            <a href="addNewApp.html" class="btn btn-primary pa-add-service" data-toggle="modal" data-target=".bs-example-modal-lg"> <i class="icon-check icons font-2xl" ></i> Salva Configurazione</a>
+                                            
+                                        </div>
+                                    </form>
+
+                                </div>
+
+                            </div>
+<!--                            card-->
+                        </div>
+                    </div>
+                    <!--/.col-->
+                </div>
+                <!--/.row-->
+            </div>
+        
+    <!-- /.conainer-fluid -->
+    </main>
+    </div>
+<!--app body-->
+
+    <!-- il menù aside forse non serve vedremo -->
+    <aside class="aside-menu">
+
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="timeline" role="tabpanel">
+                <div class="callout m-0 py-2 text-center bg-faded text-uppercase">
+                    <small><b>Storico azioni</b>
+                        </small>
+                </div>
+                <hr class="transparent mx-3 my-0">
+                <div class="callout callout-warning m-0 py-3">
+                    <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
+                    </div>
+                    <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
+                    <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
+                </div>
+                <hr class="mx-3 my-0">
+                <div class="callout callout-info m-0 py-3">
+
+                    <div><strong>Aggiunto servizio:</strong> "Lorem ipsum dolor sit"
+                    </div>
+                    <div><small class="text-guida mr-3"><i class="icon-calendar"></i>&nbsp; 16/07/2017</small></div>
+                    <div><small class="text-guida"><i class="icon-user"></i>&nbsp; Umberto Rosini</small></div>
+
+                </div>
+                <hr class="transparent mx-3 my-0">
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+
+    <footer class="app-footer">
+        <a href="http://www.agid.gov.it">AgID - Dashboard</a> CCBY Licence.
+        <span class="float-right">Powered by <a href="http://www.agid.gov.it">AgID & Team Digitale</a>
+        </span>
+    </footer>
+
+    <!-- Bootstrap and necessary plugins -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/tether/dist/js/tether.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/pace/pace.min.js"></script>
+
+
+    <!-- Plugins and scripts required by all views -->
+    <script src="bower_components/chart.js/dist/Chart.min.js"></script>
+
+
+    <!-- GenesisUI main scripts -->
+
+    <script src="js/app.js"></script>
+
+    <!-- Plugins and scripts required by this views -->
+
+    <!-- Custom scripts required by this view -->
+    <script src="js/views/main.js"></script>
+
+</body>
+
 </html>
