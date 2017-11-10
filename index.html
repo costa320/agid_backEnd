@@ -25,6 +25,26 @@
 
     <link href="css/main.css" rel="stylesheet">
 
+    <!--    chosen  css-->
+    <link rel="stylesheet" href="js/chosen/docsupport/style.css">
+    <link rel="stylesheet" href="js/chosen/docsupport/prism.css">
+    <link rel="stylesheet" href="js/chosen/chosen.css">
+
+
+    <!-- selectize -->
+    <link rel="stylesheet" href="js/selectize/selectize.js-master/BASIC/css/normalize.css">
+    <link rel="stylesheet" href="js/selectize/selectize.js-master/BASIC/css/selectize.default.css">
+    <link rel="stylesheet" href="js/selectize/selectize.js-master/BASIC/css/stylesheet.css">
+
+    <script src="js/selectize/selectize.js-master/BASIC/js/es5.js"></script>
+    <script src="js/selectize/selectize.js-master/BASIC/js/index.js"></script>
+    <script src="js/selectize/selectize.js-master/BASIC/js/jquery.min.js"></script>
+    <script src="js/selectize/selectize.js-master/BASIC/js/jqueryui.js"></script>
+    <script src="js/selectize/selectize.js-master/BASIC/js/selectize.js"></script>
+    <script src="js/selectize/selectize.js-master/BASIC/js/.js"></script>
+
+
+
 
 </head>
 
@@ -464,84 +484,266 @@
 
 
 
+                                                            <div>
+
+                                                                <!-- Nav tabs -->
+                                                                <ul class="nav nav-tabs" role="tablist">
+                                                                    <li role="presentation" class="active"><a href="#addUser" aria-controls="addUser" role="tab" data-toggle="tab">Aggiungi Utente</a></li>
+                                                                    <li role="presentation"><a href="#confApp" aria-controls="confApp" role="tab" data-toggle="tab">Configura App</a></li>
+
+                                                                </ul>
+
+                                                                <!-- Tab panes -->
+                                                                <div class="tab-content">
+
+                                                                    <div role="tabpanel" class="tab-pane active" id="addUser">
 
 
-                                                            <form>
-                                                                <div class="form-group">
-                                                                    <label for="Nome">Nome</label>
-                                                                    <input type="text" class="form-control" id="name" placeholder="nome">
+                                                                        <form>
+                                                                            <div class="form-group">
+                                                                                <label for="Nome">Nome</label>
+                                                                                <input type="text" class="form-control" id="name" placeholder="nome">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="codFisc">Codice Fiscale</label>
+                                                                                <input type="text" class="form-control" id="codFisc" placeholder="Codice Fiscale">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="codSPID">Codice SPID</label>
+                                                                                <input type="text" class="form-control" id="codSPID" placeholder="codice SPID">
+                                                                            </div>
+                                                                            <div class="form-group">
+                                                                                <label for="username">Nome Utente</label>
+                                                                                <input type="text" class="form-control" id="username" placeholder="nome utente">
+                                                                            </div>
+
+                                                                        </form>
+
+                                                                        <table class="table">
+                                                                            <thead class="m-font bold">
+                                                                                <tr class="text-center">
+                                                                                    <td>Nome Applicazione</td>
+                                                                                    <td>Azioni</td>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                                    <td class="inline">
+
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
+
+                                                                    <div role="tabpanel" class="tab-pane" id="confApp">
+
+                                                                        <form>
+                                                                            <div class="form-group">
+
+
+                                                                                <select data-placeholder="Cerca Applicazione" class="chosen-select" tabindex="2">
+<option value=""></option>
+<option value="United States">United States</option>
+<option value="United Kingdom">United Kingdom</option>
+<option value="Afghanistan">Afghanistan</option>
+<option value="Aland Islands">Aland Islands</option>
+<option value="Albania">Albania</option>
+<option value="Algeria">Algeria</option>
+<option value="American Samoa">American Samoa</option>
+<option value="Andorra">Andorra</option>
+<option value="Angola">Angola</option>
+<option value="Anguilla">Anguilla</option>
+<option value="Antarctica">Antarctica</option>
+<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+<option value="Argentina">Argentina</option>
+<option value="Armenia">Armenia</option>
+<option value="Aruba">Aruba</option>
+<option value="Australia">Australia</option>
+
+<option value="Canada">Canada</option>
+<option value="Cape Verde">Cape Verde</option>
+<option value="Cayman Islands">Cayman Islands</option>
+<option value="Central African Republic">Central African Republic</option>
+<option value="Chad">Chad</option>
+<option value="Chile">Chile</option>
+<option value="China">China</option>
+<option value="Christmas Island">Christmas Island</option>
+<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+<option value="Colombia">Colombia</option>
+
+<option value="Jordan">Jordan</option>
+<option value="Kazakhstan">Kazakhstan</option>
+<option value="Kenya">Kenya</option>
+<option value="Kiribati">Kiribati</option>
+<option value="Korea, Democratic People&apos;s Republic of">Korea, Democratic People's Republic of</option>
+<option value="Korea, Republic of">Korea, Republic of</option>
+
+<option value="Oman">Oman</option>
+<option value="Pakistan">Pakistan</option>
+<option value="Palau">Palau</option>
+<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+
+<option value="Reunion">Reunion</option>
+<option value="Romania">Romania</option>
+
+<option value="Vanuatu">Vanuatu</option>
+<option value="Venezuela, Bolivarian Republic of">Venezuela, Bolivarian Republic of</option>
+<option value="Viet Nam">Viet Nam</option>
+<option value="Virgin Islands, British">Virgin Islands, British</option>
+<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+<option value="Wallis and Futuna">Wallis and Futuna</option>
+<option value="Western Sahara">Western Sahara</option>
+<option value="Yemen">Yemen</option>
+<option value="Zambia">Zambia</option>
+<option value="Zimbabwe">Zimbabwe</option>
+</select>
+                                                                                <!--                                                                                end select cerca applicazioni-->
+
+                                                                                <select data-placeholder="Cerca gli attributi" multiple class="chosen-select" tabindex="8">
+                                                                                    <option value=""></option>
+                                                                                    <option>American Black Bear</option>
+                                                                                    <option>Asiatic Black Bear</option>
+                                                                                    <option>Brown Bear</option>
+                                                                                    <option>Giant Panda</option>
+                                                                                    <option >Sloth Bear</option>
+                                                                                    <option >Sun Bear</option>
+                                                                                    <option >Polar Bear</option>
+                                                                                    <option >Spectacled Bear</option>
+                                                                                  </select>
+                                                                                <!--                                                                                end select cerca attributi-->
+
+                                                                                <!--
+                                                                                <div id="IPA-multiSelect">
+                                                                                    <select data-placeholder="Cerca codice IPA" multiple class="chosen-select" tabindex="8" onChange="" id="selectCodIpa">
+                                                                                    <option value=""></option>
+                                                                                    <option></option>
+                                                                                    <option>Asiatic Black Bear</option>
+                                                                                    <option>Brown Bear</option>
+                                                                                    
+                                                                                  </select>
+
+                                                                                </div>
+-->
+
+
+                                                                                <!--                                                                               roba per ipa mulkti select-->
+
+
+
+
+
+
+
+
+
+
+                                                                                <div class="demo">
+
+                                                                                    <div class="control-group">
+                                                                                        <input type="text" id="input-tags" class="demo-default" value="nested,add,user,color">
+                                                                                    </div>
+                                                                                    <script>
+                                                                                        $('#input-tags').selectize({
+                                                                                            persist: false,
+                                                                                            createOnBlur: false,
+                                                                                            create: false,
+                                                                                            hideSelected:true,
+                                                                                        });
+
+                                                                                    </script>
+                                                                                </div>
+
+
+
+
+
+
+
+
+                                                                            </div>
+                                                                            <!--                                                                            end form group -->
+
+
+                                                                        </form>
+
+                                                                        <table class="table">
+                                                                            <thead class="m-font bold">
+                                                                                <tr class="text-center">
+                                                                                    <td>Nome Applicazione</td>
+                                                                                    <td>Azioni</td>
+                                                                                </tr>
+                                                                            </thead>
+                                                                            <tbody>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                                    <td class="inline">
+
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
+                                                                                    <td class="inline text-center">
+                                                                                        <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
+                                                                                        <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
+                                                                                    </td>
+                                                                                </tr>
+
+                                                                            </tbody>
+                                                                        </table>
+
+                                                                    </div>
                                                                 </div>
-                                                                <div class="form-group">
-                                                                    <label for="codFisc">Codice Fiscale</label>
-                                                                    <input type="text" class="form-control" id="codFisc" placeholder="Codice Fiscale">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="codSPID">Codice SPID</label>
-                                                                    <input type="text" class="form-control" id="codSPID" placeholder="codice SPID">
-                                                                </div>
-                                                                <div class="form-group">
-                                                                    <label for="username">Nome Utente</label>
-                                                                    <input type="text" class="form-control" id="username" placeholder="nome utente">
-                                                                </div>
 
-                                                                <a href="" class="m-left-70 m-bottom-5 btn btn-primary pa-add-service" data-toggle="modal" data-target=".modal-lg-AddUser"> <i class="icon-settings icons font-2xl"></i> Configura App</a>
-
-                                                            </form>
-
-
-
-                                                            <table class="table">
-                                                                <thead class="m-font bold">
-                                                                    <tr class="text-center">
-                                                                        <td>Nome Applicazione</td>
-                                                                        <td>Azioni</td>
-                                                                    </tr>
-                                                                </thead>
-                                                                <tbody>
-                                                                    <tr>
-                                                                        <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
-                                                                        <td class="inline">
-
-                                                                            <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="text-center">Dolor sit Amet Lorem Ipsum</td>
-                                                                        <td class="inline text-center">
-                                                                            <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
-                                                                        <td class="inline text-center">
-                                                                            <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                                        </td>
-                                                                    </tr>
-                                                                    <tr>
-                                                                        <td class="text-center">Dolor sit Amet Lorem Ipsum </td>
-                                                                        <td class="inline text-center">
-                                                                            <a href="#" title="modifica" class="m-left-39 m-right-10"><i class="icon-note icons font-2xl d-block"></i></a>
-                                                                            <a href="#" title="cancella"><i class="icon-close icons font-2xl d-block"></i></a>
-                                                                        </td>
-                                                                    </tr>
-
-                                                                </tbody>
-                                                            </table>
-
-
-
-
-
-
-
-
+                                                            </div>
 
 
                                                         </div>
+                                                        <!--                                                        end modal body-->
 
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -818,6 +1020,14 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.4/css/selectize.bootstrap2.css" type="text/javascript"></script>
+
+
+    <!-- Plugins and scripts required by all views -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js" type="text/javascript"></script>
+    <script src="js/chosen/chosen.jquery.js" type="text/javascript"></script>
+    <script src="js/chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/chosen/docsupport/init.js" type="text/javascript" charset="utf-8"></script>
 
 
     <!-- Bootstrap and necessary plugins -->
@@ -839,6 +1049,12 @@
 
     <!-- Custom scripts required by this view -->
     <script src="js/views/main.js"></script>
+
+    <!-- Custom scripts business logic-->
+    <script src="js/main.js"></script>
+
+
+
 
 </body>
 

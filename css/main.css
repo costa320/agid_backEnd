@@ -66,3 +66,12 @@
 .font-m{
     font-size: 1.3em;
 }
+/*chosen width cerca app*/
+.chosen-container {
+    width: 100% !important;
+    margin-top: 3% !important;
+}
+/*chosen margin top seleziona attributi*/
+.chosen-container-multi{
+    margin-top: 3% !important;
+}
